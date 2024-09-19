@@ -1,0 +1,521 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style-type: none;
+    
+}
+
+html,body {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+}
+
+header {
+    width:80vw;
+    display:grid;
+    grid-template-columns: 1fr 600px;
+    position:fixed;
+    align-items: center;
+    gap: 10%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+header {
+    img {
+        width:100px;
+    }
+
+    nav {
+        ul {
+            display:grid;
+            grid-template-columns: repeat(3,200px);
+        }
+
+        li:hover {
+            color: #beff1b;
+            cursor: pointer;
+        }
+    }
+}
+
+.icon-mobile {
+    display: none;
+   font-size: 30px;
+   
+}
+
+.icon-mobile {
+    i {
+        cursor: pointer;
+    }
+}
+
+.modal {
+    display: none;
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background-image: radial-gradient(#ff5500,#e01616);
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.logo-modal {
+    text-align: center;
+}
+
+.logo-modal {
+    img {
+        width:100px;
+        
+    }
+}
+
+nav.menu-mobile {
+    display: block;
+    text-align: center;
+    margin-top: 120px;
+
+  li {
+    color: #fff;
+    font-size: 40px;
+    margin-top: 10px;
+  }
+
+  li:hover {
+    color: #beff1b;
+  }
+}
+
+.btn-fechar {
+    width: 42px;
+    height: 42px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,500%);
+}
+
+section {
+    background-image: radial-gradient(#ff5500,#e01616);
+    height:100vh;
+    position:relative;
+}
+
+section {
+    .list {
+        width:70vw;
+        margin: auto;
+        height:100%;
+        position: relative;
+    }
+
+   .list {
+        .item {
+            position:absolute;
+            inset: 0;
+        }
+
+        &::before {
+           
+        content: '';
+        position: absolute;
+        height: 200px;
+        top: 50%;
+        width: 100%;
+        border-top: 1px solid #fff;
+           
+           
+        }
+    }
+
+    .item {
+        .bike-img {
+            width:70%;
+            position:absolute;
+            top:50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .bike-img {
+        img {
+            width:100%;
+            transform: rotate(-30deg);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: #000;
+            width: 100%;
+            height: 100px;
+            top:80%;
+            left:50px;
+            border: 50%;
+            filter: blur(50px);
+        }
+    }
+
+    .content {
+        position: absolute;
+        right: 100px;
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        gap: 20px;
+    }
+
+    .content {
+        .bike-information {
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 5em;
+            line-height: 1em;
+            font-family: "League Gothic",sans-serif;
+        }
+
+        .description {
+            color:#d9d9d9;
+            font-size: 9px;
+            text-align: right;
+            font-family: "poppins",sans-serif;
+            max-width:220px;
+        }
+
+        .bike-information {
+            font-size: 20px;
+            font-weight: normal;
+            font-family: "League Gothic",sans-serif;
+        }
+
+        button.information {
+            width: 120px;
+            height: 38px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid #d8d8d7;
+            background-color: #beff1b;
+            font-family: "League Gothic",sans-serif;
+            color: #000;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+       
+    }
+
+    .arrows {
+        width: 70vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-25px);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button:nth-child(1) {
+        img {
+            transform: scale(-1);
+        }
+    }
+
+    .arrows {
+
+        button {
+            width: 50px;
+            height: 50px;
+            top: 60%;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+        }
+
+        button {
+            img {
+                width:30px;
+                margin-top: 4px;
+            }
+
+        }
+
+       button:hover {
+            background-color: #beff1b;
+        }
+    }
+
+    .indicators {
+        width: 90vw;
+        height: 200px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        top: 50%;
+        left: 50%;
+        gap: 15px;
+        transform: translateX(-50%);
+    }
+
+    .indicators {
+        .number {
+            font-size: 5em;
+            font-family: "League Gothic",sans-serif;
+        }
+
+        ul {
+            display: flex;
+            gap: 10px;
+        }
+
+        ul {
+            li {
+                width: 50px;
+                height: 5px;
+                background-color: #beff1b;
+                border-radius: 5px;
+                transition: 0.5s;
+            }
+
+            .active {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+section {
+    .list {
+        --calculation: 1;
+        .item {
+            transform: translateX(calc(100vw * var(--calculation)));
+            transition: 0.5s;
+            opacity: 0;
+
+            .bike-img {
+                img {
+                   transform: rotate(0);
+                   transition: 0.5s;
+                   transition-delay: 0.3s;
+                }
+            }
+
+            .content {
+               .bike-information, h2, .description, .information {
+                  transform: translateX(calc(200px * var(--calculation)));
+                  transition: 0.7s;
+                  transition-delay: 0.3s;
+                  opacity: 0;
+               }
+
+               h2 {
+                 transition-delay: 0.5s;
+               }
+
+               .description {
+                 transition-delay: 0.7s;
+               }
+
+               .information {
+                 transition-delay: 0.9s;
+               }
+            }
+        }
+
+        .active {
+            transform: translateX(0);
+            transition: 0.5s;
+            opacity: 1;
+
+            .bike-img {
+                img {
+                   transform: rotate(-20deg);
+                 
+                }
+            }
+
+
+            .content {
+                .bike-information, h2, .description, .information {
+                   transform: translateX(0);
+                   opacity: 1;
+                  
+                }
+            }
+
+
+        }
+    }
+}
+
+
+@media screen  and (max-width:500px) {
+    .item {
+        .bike-img {
+            width:70%;
+            position:absolute;
+            left: 10%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    header {
+        width:80vw;
+        display:flex;
+        justify-content: space-around;
+        grid-template-columns: 1fr 600px;
+        position:fixed;
+        align-items: center;
+        gap: 10%;
+        left:50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .icon-mobile {
+        display: block;
+    }
+
+
+}
+
+@media screen and (max-width:1235px) {
+   
+    section {
+        .list {
+            width:70vw;
+            margin: auto;
+            height:100%;
+            position: relative;
+        }
+    
+       .list {
+            .item {
+                position:absolute;
+                inset: 0;
+            }
+    
+            &::before {
+               
+            content: '';
+            position: absolute;
+            height: 200px;
+            top: 50%;
+            width: 100%;
+            border-top: 1px solid #fff;
+               
+               
+            }
+        }
+    
+       
+    
+        .bike-img {
+            img {
+                width:100%;
+                transform: rotate(-30deg);
+            }
+    
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #000;
+                width: 100%;
+                height: 100px;
+                top:80%;
+                left:50px;
+                border: 50%;
+                filter: blur(50px);
+            }
+        }
+    
+        .content {
+            position: absolute;
+            right: 50px;
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+            gap: 20px;
+        }
+    
+        .content {
+            .bike-information {
+                font-weight: bold;
+            }
+    
+            h2 {
+                font-size: 3em;
+                line-height: 1em;
+                font-family: "League Gothic",sans-serif;
+            }
+    
+            .description {
+                color:#d9d9d9;
+                font-size: 8px;
+                text-align: right;
+                margin-top: 144px;
+                font-family: "poppins",sans-serif;
+                max-width:220px;
+            }
+    
+            .bike-information {
+                font-size: 20px;
+                font-weight: normal;
+                font-family: "League Gothic",sans-serif;
+            }
+    
+            button.information {
+                width: 120px;
+                height: 38px;
+                border-radius: 30px;
+                font-weight: bold;
+                text-transform: uppercase;
+                border: 2px solid #d8d8d7;
+                background-color: #beff1b;
+                font-family: "League Gothic",sans-serif;
+                color: #000;
+                cursor: pointer;
+                z-index: 3;
+            }
+    
+           
+        
+      }
+
+      
+     }
+
+     .indicators {
+        margin-top: 40px;
+     }
+
+}
